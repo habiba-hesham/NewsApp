@@ -8,16 +8,7 @@ class CategoryListView extends StatelessWidget {
     required this.categories,
   });
 
-  final List<Category> categories = const [
-    Category(image: 'assets/business2.jpg', text: 'Business'),
-    Category(image: 'assets/business2.jpg', text: 'Business'),
-    Category(image: 'assets/business2.jpg', text: 'Business'),
-    Category(image: 'assets/business2.jpg', text: 'Business'),
-    Category(image: 'assets/business2.jpg', text: 'Business'),
-    Category(image: 'assets/business2.jpg', text: 'Business'),
-    Category(image: 'assets/business2.jpg', text: 'Business'),
-    Category(image: 'assets/business2.jpg', text: 'Business'),
-  ];
+  final List<Category> categories;
 
   @override
   Widget build(BuildContext context) {
