@@ -1,20 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/Models/Category.dart';
+//import 'package:news_app/Models/Category.dart';
 import 'package:news_app/Widgets/CategoryListView.dart';
+//import 'package:news_app/Widgets/NewsTile.dart';
+import 'package:news_app/Widgets/TileListView.dart';
 //import 'package:news_app/Widgets/CategoryView.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
-  final List<Category> categories = const [
-    Category(image: 'assets/business2.jpg', text: 'Business'),
-    Category(image: 'assets/business2.jpg', text: 'Business'),
-    Category(image: 'assets/business2.jpg', text: 'Business'),
-    Category(image: 'assets/business2.jpg', text: 'Business'),
-    Category(image: 'assets/business2.jpg', text: 'Business'),
-    Category(image: 'assets/business2.jpg', text: 'Business'),
-    Category(image: 'assets/business2.jpg', text: 'Business'),
-    Category(image: 'assets/business2.jpg', text: 'Business'),
-  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,16 +19,47 @@ class HomePage extends StatelessWidget {
           children: [
             Text(
               "News",
-              style: TextStyle(color: Colors.black, fontSize: 25),
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 30,
+              ),
             ),
             Text(
               "Cloud",
-              style: TextStyle(color: Colors.orange, fontSize: 25),
+              style: TextStyle(
+                color: Colors.orange,
+                fontSize: 30,
+              ),
             ),
           ],
         ),
       ),
-      body: CategoryListView(categories: categories),
+      body: const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16),
+        child: CustomScrollView(
+          physics: BouncingScrollPhysics(),
+          slivers: [
+            SliverToBoxAdapter(
+              child: CategoryListView(),
+            ),
+            SliverToBoxAdapter(
+              child: SizedBox(
+                height: 32,
+              ),
+            ),
+            TileListView(),
+          ],
+        ),
+        // child: Column(
+        //   children: [
+        //     CategoryListView(categories: categories),
+        //     const SizedBox(
+        //       height: 32,
+        //     ),
+        //     const Expanded(child: TileListView()),
+        //   ],
+        // ),
+      ),
     );
   }
 }

@@ -8,20 +8,22 @@ class CategoryView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
-      height: 145,
-      width: 210,
+      margin: const EdgeInsets.only(right: 16),
+      height: 130,
+      width: 250,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         image: DecorationImage(
-            image: AssetImage(category.image), opacity: 1, fit: BoxFit.fill),
+          image: AssetImage(category.image),
+          fit: BoxFit.fill,
+        ),
       ),
       child: Center(
         child: Text(
           category.text,
           style: const TextStyle(
             color: Colors.white,
-            fontSize: 18,
+            fontSize: 20,
             fontWeight: FontWeight.bold,
           ),
         ),

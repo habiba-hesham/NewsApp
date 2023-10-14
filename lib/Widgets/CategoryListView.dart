@@ -5,16 +5,24 @@ import 'package:news_app/Widgets/CategoryView.dart';
 class CategoryListView extends StatelessWidget {
   const CategoryListView({
     super.key,
-    required this.categories,
   });
 
-  final List<Category> categories;
+  final List<Category> categories = const [
+    Category(image: 'assets/business2.jpg', text: 'Business'),
+    Category(image: 'assets/Health.jpg', text: 'Health'),
+    Category(image: 'assets/Entertainment.jpg', text: 'Entertaiment'),
+    Category(image: 'assets/General.jpg', text: 'General'),
+    Category(image: 'assets/Science.jpg', text: 'Science'),
+    Category(image: 'assets/Sports.jpg', text: 'Sports'),
+    Category(image: 'assets/Technology.jpg', text: 'Technology'),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 135,
+      height: 130,
       child: ListView.builder(
+        physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
         itemCount: categories.length,
         itemBuilder: (context, index) {
