@@ -10,7 +10,7 @@ class CategoryListView extends StatelessWidget {
   final List<Category> categories = const [
     Category(image: 'assets/business2.jpg', text: 'Business'),
     Category(image: 'assets/Health.jpg', text: 'Health'),
-    Category(image: 'assets/Entertainment.jpg', text: 'Entertaiment'),
+    Category(image: 'assets/Entertainment.jpg', text: 'Entertainment'),
     Category(image: 'assets/General.jpg', text: 'General'),
     Category(image: 'assets/Science.jpg', text: 'Science'),
     Category(image: 'assets/Sports.jpg', text: 'Sports'),

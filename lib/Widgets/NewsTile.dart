@@ -16,7 +16,7 @@ class NewsTile extends StatelessWidget {
             borderRadius: BorderRadius.circular(6),
             child: Image.network(
               article.image ??
-                  'https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80',
+                  'https://i.pinimg.com/564x/18/19/92/18199239e858f305ffe5898ba0b0b4c9.jpg',
               height: 250,
               width: double.infinity,
               fit: BoxFit.cover,
